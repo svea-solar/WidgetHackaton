@@ -68,9 +68,46 @@ struct EvDevicesWidget: Widget {
     }
 }
 
-struct EvDevicesWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        EvDevicesWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+
+struct EvDevicesWidgetEntryViewSmall : View {
+    var entry: EvDeviceProvider.Entry
+    var deviceInfo = DeviceInfo.getAll().first
+    var body: some View {
+        
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                if let deviceInfo = deviceInfo {
+                    EvDeviceInfoView(info: deviceInfo)
+                        .scaleEffect(1.25)
+                }
+            }
+        }
     }
 }
+
+struct EvDeviceWidgetSmall: Widget {
+    let kind: String = "EVDevicesWidgetSmall"
+
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: EvDeviceProvider()) { entry in
+            EvDevicesWidgetEntryView(entry: entry)
+        }
+        .configurationDisplayName("Ev Device")
+        .description("See live status of your device.")
+        .supportedFamilies([.systemSmall])
+    }
+}
+
+struct EvDevicesWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        EvDevicesWidgetEntryViewSmall(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
+
+//struct EvDevicesWidget_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EvDevicesWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+//            .previewContext(WidgetPreviewContext(family: .systemMedium))
+//    }
+//}
