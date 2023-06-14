@@ -62,8 +62,8 @@ struct EvDevicesWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: EvDeviceProvider()) { entry in
             EvDevicesWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Ev Devices")
+        .description("See live status of your devices.")
         .supportedFamilies([.systemMedium])
     }
 }
