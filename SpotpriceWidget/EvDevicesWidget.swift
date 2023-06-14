@@ -71,15 +71,13 @@ struct EvDevicesWidget: Widget {
 
 struct EvDevicesWidgetEntryViewSmall : View {
     var entry: EvDeviceProvider.Entry
-    var deviceInfo = DeviceInfo.getAll().first
+    var deviceInfo = DeviceInfo.getAll()[1]
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
             HStack {
-                if let deviceInfo = deviceInfo {
-                    EvDeviceInfoView(info: deviceInfo)
-                        .scaleEffect(1.25)
-                }
+                EvDeviceInfoView(info: deviceInfo)
+                    .scaleEffect(1.35)
             }
         }
     }
@@ -90,7 +88,7 @@ struct EvDeviceWidgetSmall: Widget {
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: EvDeviceProvider()) { entry in
-            EvDevicesWidgetEntryView(entry: entry)
+            EvDevicesWidgetEntryViewSmall(entry: entry)
         }
         .configurationDisplayName("Ev Device")
         .description("See live status of your device.")
