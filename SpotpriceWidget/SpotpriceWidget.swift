@@ -42,12 +42,43 @@ struct SimpleEntry: TimelineEntry {
 
 struct SpotpriceWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
         //Doing ui here
         VStack {
-            Text("Spotprices")
+            VStack(alignment: .center) {
+                Text("Status right now")
+                    .font(.system(size: 12))
+                    .foregroundColor(.gray)
+                Text("Low spot price")
+                    .font(.caption)
+                
+            }
+            .padding(.horizontal, 25)
+            .padding(.bottom, 20)
+            
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Solvägen")
+                        .foregroundColor(.white)
+                        .font(.caption)
+    
+                    Image("SpotPriceLow")
+                        .offset(y: 10)
+                }
+                
+                Text("84 öre")
+                    .foregroundColor(Color(red: 0.8, green: 0.8, blue: 0.8))
+                    .font(.caption)
+                    .offset(y: -10)
+            }
+            .padding(.horizontal, 25)
+            .background(.black)
+            .cornerRadius(16)
+            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
     }
 }
 
@@ -58,14 +89,23 @@ struct SpotpriceWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             SpotpriceWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Spot price")
+        .description("See current spot price")
+        .supportedFamilies([.systemSmall])
     }
 }
 
 struct SpotpriceWidget_Previews: PreviewProvider {
     static var previews: some View {
         SpotpriceWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+           
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(.white, lineWidth: 5)
+            )
+            
     }
 }
