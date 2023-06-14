@@ -78,6 +78,12 @@ struct SpotpriceWidgetEntryView : View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+        .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(.white, lineWidth: 5)
+        )
         
     }
 }
@@ -93,6 +99,7 @@ struct SpotpriceWidget: Widget {
         .description("See current spot price")
         .supportedFamilies([.systemSmall])
     }
+    
 }
 
 struct SpotpriceWidget_Previews: PreviewProvider {
@@ -100,12 +107,6 @@ struct SpotpriceWidget_Previews: PreviewProvider {
         SpotpriceWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
            
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-            .cornerRadius(20)
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.white, lineWidth: 5)
-            )
             
     }
 }
