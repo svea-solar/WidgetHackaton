@@ -9,12 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            
+        VStack(spacing: 20) {
+            Spacer()
+            VStack {
+                Image(systemName: "laptopcomputer")
+                    .imageScale(.large)
+                    .font(.system(size: 60))
+                    .foregroundColor(.pink)
+                Spacer().frame(height: 20)
+                VStack(spacing: 5) {
+                    Text("Svea Widgets").font(.title)
+                    Text("Hackathon!").font(.title2)
+                }
+            }
+            Spacer()
+            VStack(spacing: 5) {
+                Text("14, June, 2023").font(.title3).foregroundColor(.gray)
+            }
         }
         .padding()
     }
