@@ -15,5 +15,6 @@ struct SpotpriceWidgetBundle: WidgetBundle {
         SpotpriceWidgetLiveActivity()
         EvDevicesWidget()
         EvDeviceWidgetSmall()
+        ChargingLargeWidget()
     }
 }
