@@ -45,7 +45,7 @@ struct SpotpriceWidgetEntryView : View {
     @Environment(\.widgetFamily) var widgetFamily
     var body: some View {
         //Doing ui here
-        ChargingLargeWidget()
+        Text("Spot prices")
     }
 }
 

@@ -13,5 +13,6 @@ struct SpotpriceWidgetBundle: WidgetBundle {
     var body: some Widget {
         SpotpriceWidget()
         SpotpriceWidgetLiveActivity()
+        ChargingLargeWidget()
     }
 }

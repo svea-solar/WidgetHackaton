@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D17BE532A39BEBA00871540 /* ChargingLargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */; };
 		4D17BE542A39BEFA00871540 /* ChargingLargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */; };
 		B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */; };
 		B840515A2A39AD20008E8584 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051592A39AD20008E8584 /* ContentView.swift */; };
@@ -258,7 +257,6 @@
 			files = (
 				B840517B2A39AE4B008E8584 /* SpotpriceWidget.intentdefinition in Sources */,
 				B840515A2A39AD20008E8584 /* ContentView.swift in Sources */,
-				4D17BE532A39BEBA00871540 /* ChargingLargeWidget.swift in Sources */,
 				B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
