@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D17BE532A39BEBA00871540 /* ChargingLargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */; };
+		4D17BE542A39BEFA00871540 /* ChargingLargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */; };
 		B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */; };
 		B840515A2A39AD20008E8584 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051592A39AD20008E8584 /* ContentView.swift */; };
 		B840515C2A39AD22008E8584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B840515B2A39AD22008E8584 /* Assets.xcassets */; };
@@ -47,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingLargeWidget.swift; sourceTree = "<group>"; };
 		B84051542A39AD20008E8584 /* WidgetHackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetHackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHackatonApp.swift; sourceTree = "<group>"; };
 		B84051592A39AD20008E8584 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D17BE512A39BE5C00871540 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				4D17BE522A39BEBA00871540 /* ChargingLargeWidget.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		B840514B2A39AD20008E8584 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +144,7 @@
 		B840516F2A39AE4A008E8584 /* SpotpriceWidget */ = {
 			isa = PBXGroup;
 			children = (
+				4D17BE512A39BE5C00871540 /* Widget */,
 				B84051702A39AE4A008E8584 /* SpotpriceWidgetBundle.swift */,
 				B84051722A39AE4A008E8584 /* SpotpriceWidgetLiveActivity.swift */,
 				B84051742A39AE4A008E8584 /* SpotpriceWidget.swift */,
@@ -246,6 +258,7 @@
 			files = (
 				B840517B2A39AE4B008E8584 /* SpotpriceWidget.intentdefinition in Sources */,
 				B840515A2A39AD20008E8584 /* ContentView.swift in Sources */,
+				4D17BE532A39BEBA00871540 /* ChargingLargeWidget.swift in Sources */,
 				B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D17BE542A39BEFA00871540 /* ChargingLargeWidget.swift in Sources */,
 				B840517A2A39AE4B008E8584 /* SpotpriceWidget.intentdefinition in Sources */,
 				B84051732A39AE4A008E8584 /* SpotpriceWidgetLiveActivity.swift in Sources */,
 				B84051752A39AE4A008E8584 /* SpotpriceWidget.swift in Sources */,
@@ -395,7 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetHackaton/Preview Content\"";
-				DEVELOPMENT_TEAM = Y7U2RTVWG2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -425,7 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetHackaton/Preview Content\"";
-				DEVELOPMENT_TEAM = Y7U2RTVWG2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

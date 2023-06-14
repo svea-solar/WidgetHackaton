@@ -42,12 +42,10 @@ struct SimpleEntry: TimelineEntry {
 
 struct SpotpriceWidgetEntryView : View {
     var entry: Provider.Entry
-
+    @Environment(\.widgetFamily) var widgetFamily
     var body: some View {
         //Doing ui here
-        VStack {
-            Text("Spotprices")
-        }
+        ChargingLargeWidget()
     }
 }
 
@@ -58,14 +56,15 @@ struct SpotpriceWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             SpotpriceWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Svea Widget")
+        .description("Car charging widget.")
+        .supportedFamilies([.systemLarge])
     }
 }
 
 struct SpotpriceWidget_Previews: PreviewProvider {
     static var previews: some View {
         SpotpriceWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
