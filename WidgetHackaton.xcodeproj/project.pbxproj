@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B67F97E2A39BD720025E889 /* EvDevicesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67F97C2A39BC6D0025E889 /* EvDevicesWidget.swift */; };
+		5B88C8312A39C1D4006D6D49 /* EvDeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88C82F2A39C1B0006D6D49 /* EvDeviceInfoView.swift */; };
+		5B88C8322A39C264006D6D49 /* EvDeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88C82D2A39BE9E006D6D49 /* EvDeviceConfiguration.swift */; };
+		5B88C8332A39C276006D6D49 /* EvDeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88C82F2A39C1B0006D6D49 /* EvDeviceInfoView.swift */; };
+		5B88C8342A39C279006D6D49 /* EvDeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88C82D2A39BE9E006D6D49 /* EvDeviceConfiguration.swift */; };
+		5B88C8352A39C308006D6D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B840515B2A39AD22008E8584 /* Assets.xcassets */; };
 		B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */; };
 		B840515A2A39AD20008E8584 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84051592A39AD20008E8584 /* ContentView.swift */; };
 		B840515C2A39AD22008E8584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B840515B2A39AD22008E8584 /* Assets.xcassets */; };
@@ -47,6 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B67F97C2A39BC6D0025E889 /* EvDevicesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvDevicesWidget.swift; sourceTree = "<group>"; };
+		5B88C82D2A39BE9E006D6D49 /* EvDeviceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvDeviceConfiguration.swift; sourceTree = "<group>"; };
+		5B88C82F2A39C1B0006D6D49 /* EvDeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvDeviceInfoView.swift; sourceTree = "<group>"; };
 		B84051542A39AD20008E8584 /* WidgetHackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetHackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHackatonApp.swift; sourceTree = "<group>"; };
 		B84051592A39AD20008E8584 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +116,8 @@
 			children = (
 				B84051572A39AD20008E8584 /* WidgetHackatonApp.swift */,
 				B84051592A39AD20008E8584 /* ContentView.swift */,
+				5B88C82D2A39BE9E006D6D49 /* EvDeviceConfiguration.swift */,
+				5B88C82F2A39C1B0006D6D49 /* EvDeviceInfoView.swift */,
 				B840515B2A39AD22008E8584 /* Assets.xcassets */,
 				B840515D2A39AD22008E8584 /* Preview Content */,
 			);
@@ -136,6 +147,7 @@
 				B84051702A39AE4A008E8584 /* SpotpriceWidgetBundle.swift */,
 				B84051722A39AE4A008E8584 /* SpotpriceWidgetLiveActivity.swift */,
 				B84051742A39AE4A008E8584 /* SpotpriceWidget.swift */,
+				5B67F97C2A39BC6D0025E889 /* EvDevicesWidget.swift */,
 				B84051762A39AE4A008E8584 /* SpotpriceWidget.intentdefinition */,
 				B84051772A39AE4B008E8584 /* Assets.xcassets */,
 				B84051792A39AE4B008E8584 /* Info.plist */,
@@ -233,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B88C8352A39C308006D6D49 /* Assets.xcassets in Resources */,
 				B84051782A39AE4B008E8584 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B840517B2A39AE4B008E8584 /* SpotpriceWidget.intentdefinition in Sources */,
+				5B88C8322A39C264006D6D49 /* EvDeviceConfiguration.swift in Sources */,
 				B840515A2A39AD20008E8584 /* ContentView.swift in Sources */,
 				B84051582A39AD20008E8584 /* WidgetHackatonApp.swift in Sources */,
+				5B88C8312A39C1D4006D6D49 /* EvDeviceInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B840517A2A39AE4B008E8584 /* SpotpriceWidget.intentdefinition in Sources */,
+				5B88C8342A39C279006D6D49 /* EvDeviceConfiguration.swift in Sources */,
+				5B67F97E2A39BD720025E889 /* EvDevicesWidget.swift in Sources */,
 				B84051732A39AE4A008E8584 /* SpotpriceWidgetLiveActivity.swift in Sources */,
+				5B88C8332A39C276006D6D49 /* EvDeviceInfoView.swift in Sources */,
 				B84051752A39AE4A008E8584 /* SpotpriceWidget.swift in Sources */,
 				B84051712A39AE4A008E8584 /* SpotpriceWidgetBundle.swift in Sources */,
 			);
