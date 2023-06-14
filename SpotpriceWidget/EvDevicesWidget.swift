@@ -96,12 +96,40 @@ struct EvDeviceWidgetSmall: Widget {
     }
 }
 
-struct EvDevicesWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        EvDevicesWidgetEntryViewSmall(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+struct ChargingLargeWidgetEntryView : View {
+    var entry: EvDeviceProvider.Entry
+    var body: some View {
+        ChargingLargeWidgetView()
     }
 }
+
+struct ChargingLargeWidget: Widget {
+    let kind: String = "ChargingLargeWidget"
+
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: EvDeviceProvider()) { entry in
+            ChargingLargeWidgetEntryView(entry: entry)
+        }
+        .configurationDisplayName("Ev Device")
+        .description("Car charging widget.")
+        .supportedFamilies([.systemLarge])
+    }
+}
+
+struct ChargingLargeWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        ChargingLargeWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
+    }
+}
+
+
+//struct EvDevicesWidget_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EvDevicesWidgetEntryViewSmall(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
 
 //struct EvDevicesWidget_Previews: PreviewProvider {
 //    static var previews: some View {

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WidgetKit
 
 struct ChargingLargeWidgetView: View {
     var body: some View {
@@ -72,31 +71,3 @@ struct CustomProgressBar: ProgressViewStyle {
     }
 }
 
-struct ChargingLargeWidgetEntryView : View {
-    var entry: Provider.Entry
-    @Environment(\.widgetFamily) var widgetFamily
-    var body: some View {
-        //Doing ui here
-        ChargingLargeWidgetView()
-    }
-}
-
-struct ChargingLargeWidget: Widget {
-    let kind: String = "ChargingLargeWidget"
-
-    var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            ChargingLargeWidgetEntryView(entry: entry)
-        }
-        .configurationDisplayName("Svea Widget")
-        .description("Car charging widget.")
-        .supportedFamilies([.systemLarge])
-    }
-}
-
-struct ChargingLargeWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        ChargingLargeWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
-    }
-}
