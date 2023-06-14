@@ -105,7 +105,6 @@ struct SpotpriceWidget: Widget {
 struct SpotpriceWidget_Previews: PreviewProvider {
     static var previews: some View {
         SpotpriceWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-           
             .previewContext(WidgetPreviewContext(family: .systemSmall))
             
     }
